@@ -1,4 +1,4 @@
-import { SidebarItem } from "@/app/types/sidebar"
+import { SidebarItem } from "@/utils/types/sidebarItem"
 import {Contact, Home, PanelsTopLeft, Settings, User} from "lucide-react"
 // Menu items.
 export const groupItems: SidebarItem[] = [
@@ -28,7 +28,7 @@ export const dropdownItems: SidebarItem[] = [
     {
         title: 'My Account',
         icon: User,
-        url: '/profile'
+        url: '/account'
     },
     {
         title: 'Settings',
