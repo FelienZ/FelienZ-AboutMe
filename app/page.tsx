@@ -1,14 +1,9 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { AppSidebar } from "@/components/app-sidebar"
+import Mainpage from "./Home/Mainpage";
 
-export default function Home({ children }: { children: React.ReactNode }) {
+export default function Home() {
   return (
-    <SidebarProvider>
-      <AppSidebar />
-      <main>
-        <SidebarTrigger />
-        {children}
-      </main>
-    </SidebarProvider>
-  )
+    <div>
+      <Mainpage/>
+    </div>
+  );
 }
