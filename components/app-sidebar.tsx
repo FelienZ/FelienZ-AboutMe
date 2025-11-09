@@ -1,4 +1,4 @@
-import { ChevronUp, Contact, Home, icons, PanelsTopLeft, Settings, User, User2 } from "lucide-react"
+import { ChevronUp, User2 } from "lucide-react"
 
 import {
   Sidebar,
@@ -12,43 +12,8 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu"
+import { dropdownItems, groupItems } from "@/utils/sidebar"
 
-// Menu items.
-const items = [
-  {
-    title: "Home",
-    url: "/",
-    icon: Home,
-  },
-  {
-    title: "My Profile",
-    url: "/profile",
-    icon: User,
-  },
-  {
-    title: "My Projects",
-    url: "/projects",
-    icon: PanelsTopLeft,
-  },
-  {
-    title: "Contact Me",
-    url: "/contact",
-    icon: Contact,
-  },
-]
-
-const dropdownItems = [
-    {
-        title: 'My Account',
-        icon: User,
-        url: '/profile'
-    },
-    {
-        title: 'Settings',
-        icon: Settings,
-        url: '/settings'
-    },
-]
 export function AppSidebar() {
   return (
     <Sidebar>
@@ -57,7 +22,7 @@ export function AppSidebar() {
           <SidebarGroupLabel className="font-bold text-sm">{'Rajabfadh Portofolio'.toUpperCase()}</SidebarGroupLabel>
           <SidebarGroupContent className="h-full">
             <SidebarMenu className="mt-5 gap-4 divide-y">
-                {items.map((item) => (
+                {groupItems.map((item) => (
                 <SidebarMenuItem key={item.title} className="pb-2">
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
