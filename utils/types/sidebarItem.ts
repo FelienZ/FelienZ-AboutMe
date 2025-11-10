@@ -1,9 +1,8 @@
 import { LucideProps } from "lucide-react";
 import React, { ForwardRefExoticComponent } from "react";
+import { Iteminterface } from "./interfaceItem";
 
-type sidebarIcon = ForwardRefExoticComponent<Omit<LucideProps, "ref">& React.RefAttributes<SVGSVGElement>>
-export interface SidebarItem{
-    title: string,
-    url: string,
-    icon: sidebarIcon
+export type iconItem = ForwardRefExoticComponent<Omit<LucideProps, "ref">& React.RefAttributes<SVGSVGElement>>
+export interface SidebarItem extends Iteminterface{
+    icon: iconItem
 }
